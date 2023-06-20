@@ -1,0 +1,19 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml:1:1-58
+INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml:1:1-58
+INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml:1:1-58
+	package
+		ADDED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml:1:11-55
+		INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml
+		INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml:1:1-58
+uses-sdk
+INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml
+INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml
+		ADDED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml
+		INJECTED from /home/kaertec/.pub-cache/hosted/pub.dartlang.org/amplify_core-0.6.13/android/src/main/AndroidManifest.xml

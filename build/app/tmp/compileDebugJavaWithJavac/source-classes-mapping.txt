@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/flutter/tek_capsule/BuildConfig.java
+ com.flutter.tek_capsule.BuildConfig
