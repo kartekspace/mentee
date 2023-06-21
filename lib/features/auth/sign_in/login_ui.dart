@@ -28,17 +28,16 @@ class _SignInUIState extends State<SignInUI> {
       body: FadedSlideAnimation(
         Column(
           children: [
-            Spacer(flex: 2),
-            Expanded(flex: 3, child: Image.asset("assets/logo_main.png")),
+            Spacer(),
+            Expanded(child: Image.asset("assets/logo_main.png")),
             Text(getTranslationOf('app_title')!,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.headline6!.copyWith(
                     color: Theme.of(context).primaryColor,
                     fontSize: 18,
                     fontWeight: FontWeight.bold)),
-                    Spacer(),
+            Spacer(),
             Expanded(
-                flex: 3,
                 child:
                     FadedScaleAnimation(Image.asset("assets/img_signin.png"))),
             Stack(
@@ -95,8 +94,8 @@ class _SignInUIState extends State<SignInUI> {
                   end: 0,
                   start: 0,
                   child: Container(
-                    height: 70,
-                    padding: EdgeInsets.only(bottom: 20, top: 10),
+                    height: 50,
+                    padding: EdgeInsets.only(bottom: 5, top: 5),
                     decoration: BoxDecoration(
                       color: Theme.of(context).primaryColor,
                       borderRadius: BorderRadius.vertical(
@@ -110,7 +109,7 @@ class _SignInUIState extends State<SignInUI> {
                             getTranslationOf('facebook')!),
                         Container(
                           width: 1,
-                          height: 25,
+                          height: 20,
                           color: Theme.of(context).backgroundColor,
                         ),
                         socialButton('assets/icons/ic_ggl.png',

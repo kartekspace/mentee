@@ -31,7 +31,7 @@ class _FullNewsState extends State<FullNews> {
         child: Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 IconButton(
@@ -42,16 +42,17 @@ class _FullNewsState extends State<FullNews> {
                     onPressed: () {
                       Navigator.pop(context);
                     }),
-                Spacer(),
-                Center(
+                Expanded(
                   child: Text(
                     title,
                     style: theme.textTheme.bodySmall!.copyWith(
                       color: whiteTextColor,
                     ),
+                    softWrap: false,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
-                Spacer(),
                 Icon(
                   Icons.more_vert,
                   color: whiteTextColor,

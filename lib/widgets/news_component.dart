@@ -70,7 +70,7 @@ class _NewsComponentState extends State<NewsComponent> {
             : react == false
                 ? Container(
                     padding: EdgeInsets.only(
-                        left: 20, right: 20, bottom: 36, top: 24),
+                        left: 20, right: 20, bottom: 15, top: 15),
                     decoration: BoxDecoration(
                         color: theme.bottomAppBarColor,
                         ),
@@ -362,59 +362,46 @@ class _NewsComponentState extends State<NewsComponent> {
                         },
                         child: Container(
                           width: MediaQuery.of(context).size.width,
-                          height: MediaQuery.of(context).size.height / 2,
+                          height: MediaQuery.of(context).size.height / 2.6,
                           child: Image.network(
                             payload[index].imageUrl!,
                             fit: BoxFit.cover,
                           ),
                         )),
-                    PositionedDirectional(
-                      bottom: 0,
-                      start: 0,
-                      end: 0,
-                      child: Container(
-                        height: 20,
-                        decoration: BoxDecoration(
-                            color: theme.backgroundColor,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(30), topRight: Radius.circular(30))),
-                      ),
-                    ),
-                    if (widget.showAppbar)
-                      Frost(
-                        child: AppBar(
-                          centerTitle: true,
-                          title: Text(
-                            widget.title!,
-                            style: theme.textTheme.headline6!.copyWith(
-                              color: theme.backgroundColor,
-                              fontSize: 18,
-                            ),
-                          ),
-                        ),
-                        frostColor: theme.primaryColor,
-                        blur: 5,
-                        frostOpacity: 0.05,
-                      ),
+
+                    // if (widget.showAppbar)
+                    //   Frost(
+                    //     child: AppBar(
+                    //       centerTitle: true,
+                    //       title: Text(
+                    //         widget.title!,
+                    //         style: theme.textTheme.headline6!.copyWith(
+                    //           color: theme.backgroundColor,
+                    //           fontSize: 18,
+                    //         ),
+                    //       ),
+                    //     ),
+                    //     frostColor: theme.primaryColor,
+                    //     blur: 5,
+                    //     frostOpacity: 0.05,
+                    //   ),
                   ],
                 ),
                 Expanded(
                   child: SingleChildScrollView(
                     child: Stack(
                       children: [
-                        PositionedDirectional(
-                          end: 24,
-                          top: 40,
-                          child: Image.asset(
-                            'assets/ic_swipeleft.png',
-                            scale: 2,
-                          ),
-                        ),
+                        // PositionedDirectional(
+                        //   end: 24,
+                        //   top: 40,
+                        //   child: Image.asset(
+                        //     'assets/ic_swipeleft.png',
+                        //     scale: 2,
+                        //   ),
+                        // ),
                         Column(
                           children: [
-                            SizedBox(
-                              height: 8,
-                            ),
+
                             GestureDetector(
                               onTap: () {
                                 // setState(() {
@@ -430,10 +417,14 @@ class _NewsComponentState extends State<NewsComponent> {
                                   horizontal: 16,
                                 ),
                                 child: FadedSlideAnimation(
-                                  Text(
-                                    payload[index].title!,
-                                    style: theme.textTheme.headline6!.copyWith(
-                                      fontSize: 18,
+                                  Align(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      payload[index].title!,
+                                      style: theme.textTheme.headline6!.copyWith(
+                                        fontSize: 18,
+                                      ),
+                                      textAlign: TextAlign.left,
                                     ),
                                   ),
                                   beginOffset: Offset(0, 3),
@@ -462,6 +453,9 @@ class _NewsComponentState extends State<NewsComponent> {
                                 child: FadedSlideAnimation(
                                   Text(
                                     payload[index].description!,
+                                    softWrap: false,
+                                    maxLines: 10,
+                                    overflow: TextOverflow.ellipsis,
                                     style: theme.textTheme.subtitle2!.copyWith(
                                       fontWeight: FontWeight.normal,
                                       fontSize: 13,

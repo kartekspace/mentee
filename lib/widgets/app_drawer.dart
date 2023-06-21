@@ -70,7 +70,7 @@ class AppDrawer extends StatelessWidget {
           child: ListView(
             children: [
               SizedBox(
-                height: 24,
+                height: 18,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -112,6 +112,7 @@ class AppDrawer extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 8),
                   shrinkWrap: true,
                   itemCount: _drawerItems.length,
+                  itemExtent: 40.0,
                   itemBuilder: (context, index) {
                     return ListTile(
                       leading: Icon(
@@ -177,8 +178,8 @@ class AppDrawer extends StatelessWidget {
                                   itemCount: topicList.length,
                                   gridDelegate:
                                       SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount: 3,
-                                    childAspectRatio: 1.0,
+                                    crossAxisCount: 1,
+                                    childAspectRatio: 4.0,
                                   ),
                                   itemBuilder: (context, index) {
                                     return GestureDetector(
@@ -201,24 +202,17 @@ class AppDrawer extends StatelessWidget {
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: [
-                                            Icon(
-                                              Icons.computer,
-                                              color: theme.primaryColor,
-                                              size: 20,
-                                            ),
-                                            SizedBox(
-                                              height: 8,
-                                            ),
-                                            FittedBox(
-                                              fit: BoxFit.cover,
-                                              child: Text(
-                                                topicList[index].title!,
-                                                style: theme.textTheme.caption!
-                                                    .copyWith(
-                                                  fontSize: 10,
-                                                  color: theme.focusColor,
-                                                  fontWeight: FontWeight.w500,
-                                                ),
+
+                                            Text(
+                                              topicList[index].title!,
+                                              softWrap: false,
+                                              maxLines: 2,
+                                              overflow: TextOverflow.ellipsis,
+                                              style: theme.textTheme.caption!
+                                                  .copyWith(
+                                                fontSize: 10,
+                                                color: theme.focusColor,
+                                                fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                           ],
