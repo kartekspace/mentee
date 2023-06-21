@@ -1,4 +1,4 @@
-# qu_news
+# Tek Capsule
 
 A new Flutter application.
 
